@@ -47,12 +47,14 @@ class _HomePageState extends State<HomePage> {
       body: InkWell(
         onTap: regenerateBackgroundColor,
         child: Container(
+          key: Key("containerForText"),
           color: _backgroundColor,
           alignment: _textAlignment,
           child: InkWell(
             onTap: regenerateAlignment,
             child: Text(
               _mainText,
+              key: Key("mainText"),
               style: TextStyle(
                 fontFamily: "Montserrat",
                 fontSize: 30,
