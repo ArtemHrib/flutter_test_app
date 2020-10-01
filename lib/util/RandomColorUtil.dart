@@ -12,7 +12,7 @@ class RandomColorUtil {
     int redChannelIntensity = _random.nextInt(_MAX_RANDOM_INTENSITY);
     int greenChannelIntensity = _random.nextInt(_MAX_RANDOM_INTENSITY);
     int blueChannelIntensity = _random.nextInt(_MAX_RANDOM_INTENSITY);
-    double opacity = changeOpacity ? _random.nextDouble() : _MAX_OPACITY;
+    double opacity = changeOpacity ? 1 - _random.nextDouble() : _MAX_OPACITY;
     return Color.fromRGBO(
         redChannelIntensity, greenChannelIntensity, blueChannelIntensity, opacity);
   }
